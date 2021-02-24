@@ -1,0 +1,32 @@
+<!-- <p>create-transaction-details works!</p> -->
+<h3>Insert Transactions</h3>
+<div>
+    <form (ngSubmit)="onSubmit()" style="width: 400px; padding-left: 50px;">
+        <div class="form-group">
+            <label for="transactionId">Transaction Id</label>
+            <input type="text" id="transactionId" name="transactionId" class="form-control" required
+                [(ngModel)]="transactiondetails.transactionId">
+        </div>
+        <div class="form-group">
+            <label for="guestId">Guest Id</label>
+            <input type="text" id="guestId" name="guestId" class="form-control" required
+                [(ngModel)]="transactiondetails.guestId">
+        </div>
+        <div class="form-group">
+            <label for="walletId">Wallet Id</label>
+            <input type="text" id="walletId" name="walletId" class="form-control" required
+                [(ngModel)]="transactiondetails.walletId">
+        </div>
+        <div class="form-group">
+            <label for="credit">Credit</label>
+            <input type="text" id="credit" name="credit" class="form-control" required
+                [(ngModel)]="transactiondetails.credit">
+        </div>
+        <div class="form-group">
+            <label for="debit">Debit</label>
+            <input type="text" id="debit" name="debit" class="form-control" required
+                [(ngModel)]="transactiondetails.debit">
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>

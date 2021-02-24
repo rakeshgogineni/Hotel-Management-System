@@ -1,0 +1,20 @@
+<body>
+  <h3>Update Room details</h3>
+  <div [hidden]="submitted" style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="roomNo">Room No</label>
+        <input type="text" class="form-control" id="roomNo" required [(ngModel)]="roomdetails.roomNo" name="roomNo" />
+      </div>
+
+      <div class="form-group">
+        <label for="roomCost">Room Cost</label>
+        <input type="text" class="form-control" id="roomCost" required [(ngModel)]="roomdetails.roomCost"
+          name="roomCost" />
+      </div>
+
+      <button type="submit" class="btn btn-info">Update</button>
+    </form>
+  </div>
+
+</body>

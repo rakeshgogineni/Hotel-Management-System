@@ -1,0 +1,55 @@
+<!-- <p>transaction-details works!</p> -->
+<br>
+<body>
+<div style="text-align:center">
+    <h1>
+        Transaction Details
+    </h1>
+</div>
+<br>
+<br>
+<br>
+<div class="big">
+    <table align="center">
+        <thead>
+            <tr>
+                <th size=4>Transaction Id</th>
+                <th size=4>Guest Id</th>
+                <th size=4>wallet Id</th>
+                <th size=4>Credit</th>
+                <th size=4>Debit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let td of transactionDetails'>
+                <td size=4>
+                    <h5>{{td.transactionId}}</h5>
+                </td>
+                <td size=4>
+                    <h5>{{td.guestId}}</h5>
+                </td>
+                <td size=4>
+                    <h5>{{td.walletId}}</h5>
+                </td>
+                <td size=4>
+                    <h5>{{td.credit}}</h5>
+                </td>
+                <td size=4>
+                    <h5>{{td.debit}}</h5>
+                </td>
+                <td>
+
+                    <button (click)="deleteTransactionDetails(td.transactionId)" class="btn btn-danger">Delete</button>
+                    <button (click)="updateTransactionDetails(td.transactionId)" class="btn btn-warning" style="margin-left: 10px">Update</button>
+          
+                </td>
+            </tr>
+            <tr *ngIf="!transactionDetails || transactionDetails.length==0">
+                <td colspan="12">
+                    No Transactions available
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</body>

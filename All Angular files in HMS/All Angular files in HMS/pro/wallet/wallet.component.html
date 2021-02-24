@@ -1,0 +1,49 @@
+<!-- <p>wallet works!
+</p>  -->
+<br>
+<body>
+<div style="text-align:center">
+    <h1>
+        Wallet Details
+    </h1>
+</div>
+<br>
+<br>
+<br>
+<div class="big">
+    <table align="center">
+        <thead>
+            <tr>
+                <th size=4>wallet Id</th>
+                <th size=4>wallet Type</th>
+                <th size=4>wallet Amount</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let w of wallet'>
+                <td size=4>
+                    <h5>{{w.walletId}}</h5>
+                </td>
+                <td size=4>
+                    <h5>{{w.walletType}}</h5>
+                </td>
+                <td size=4>
+                    <h5>{{w.walletAmount}}</h5>
+                </td>
+                <td>
+
+                    <button (click)="deleteWallet(w.walletId)" class="btn btn-danger">Delete</button>
+                    <button (click)="updateWallet(w.walletId)" class="btn btn-warning" style="margin-left: 10px">Update</button>
+  
+
+                </td>
+            </tr>
+            <tr *ngIf="!wallet || wallet.length==0">
+                <td colspan="12">
+                    No wallets available
+                </td>
+            </tr>
+        </tbody>
+    </table>
+ </div>
+</body>

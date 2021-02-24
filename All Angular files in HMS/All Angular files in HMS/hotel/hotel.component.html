@@ -1,0 +1,86 @@
+<br>
+
+<body>
+  <div>
+    <h1>
+
+      Hotel Details
+    </h1>
+
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <div class="bg">
+
+    <table align="center">
+
+      <thead>
+
+        <tr>
+
+          <th size=4>HOTEL ID</th>
+
+          <th size=4>HOTEL NAME</th>
+
+          <th size=4>ADDRESS</th>
+
+          <th size=4>PHONE NO</th>
+
+          <th size=4>NO. OF ROOM</th>
+
+          <th size=4>DESCRIPTION</th>
+
+
+
+        </tr>
+
+      </thead>
+      <tbody>
+        <tr *ngFor='let hotel of hotel'>
+
+          <td size=4>
+            <h5>{{hotel.hotelId}}</h5>
+          </td>
+          <td size=4>
+            <h5>{{hotel.hotelName}}</h5>
+          </td>
+          <td size=4>
+            <h5>{{hotel.address}}</h5>
+          </td>
+          <td size=4>
+            <h5>{{hotel.phone}}</h5>
+          </td>
+          <td size=4>
+            <h5>{{hotel.noOfRoom}}</h5>
+          </td>
+          <td size=4>
+            <h5>{{hotel.description}}</h5>
+          </td>
+
+          <td>
+
+            <button (click)="deleteHotel(hotel.hotelId)" class="btn btn-danger">Delete</button>
+         
+            <button (click)="updateHotel(hotel.hotelId)" class="btn btn-warning" style="margin-left: 10px">Update</button>
+
+          </td>
+            
+
+          
+
+
+
+        </tr>
+        <tr *ngIf="!hotel || hotel.length==0">
+          <td colspan="12">
+            No Hotels available
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</body>

@@ -1,0 +1,47 @@
+<body><div>
+    <form (ngSubmit)="onSubmit()" style="width: 400px; padding-left: 50px;">
+        <div class="form-group">
+            <label for="guestId">Guest Id</label>
+            <input type="text" id="guestId" name="guestId" class="form-control" required [(ngModel)]="bookingdetails.guestId">
+        </div>
+        <div class="form-group">
+            <label for="hotelId">Hotel Id</label>
+            <input type="text" id="hotelId" name="hotelId" class="form-control" required [(ngModel)]="bookingdetails.hotelId">
+        </div>
+        <div class="form-group">
+            <label for="roomId">Room Id</label>
+            <input type="text" id="roomId" name="roomId" class="form-control" required [(ngModel)]="bookingdetails.roomId">
+        </div>
+        <div class="form-group">
+            <label for="bookingId">Booking Id</label>
+            <input type="text" id="bookingId" name="bookingId" class="form-control" required [(ngModel)]="bookingdetails.bookingId">
+        </div>
+        <div class="form-group">
+            <label for="checkinDate">Checkin Date</label>
+            <input type="text" id="checkinDate" name="checkinDate" class="form-control" required [(ngModel)]="bookingdetails.checkinDate">
+        </div>
+        <div class="form-group">
+            <label for="checkoutDate">Checkout Date</label>
+            <input type="text" id="checkoutDate" name="checkoutDate" class="form-control" required [(ngModel)]="bookingdetails.checkoutDate">
+        </div>
+        <div class="form-group">
+            <label for="amountPaid">Amount Paid</label>
+            <input type="text" id="amountPaid" name="amountPaid" class="form-control" required [(ngModel)]="bookingdetails.amountPaid">
+        </div>
+        <div class="form-group">
+            <label for="amountPending">Amount Pending</label>
+            <input type="text" id="amountPending" name="amountPending" class="form-control" required [(ngModel)]="bookingdetails.amountPending">
+        </div>
+        <div class="form-group">
+            <label for="status">Status</label>
+            <input type="text" id="status" name="status" class="form-control" required [(ngModel)]="bookingdetails.status">
+        </div>
+        
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>
+
+
+
+</body>
+
