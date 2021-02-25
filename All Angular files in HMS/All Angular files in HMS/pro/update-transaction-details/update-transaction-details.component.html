@@ -1,0 +1,24 @@
+<!-- <p>update-transaction-details works!</p> -->
+<h3>Update Transactions</h3>
+<div [hidden]="submitted" style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="transactionId">transactiondetails Id</label>
+            <input type="text" class="form-control" id="transactionId" required [(ngModel)]="transactiondetails.transactionId" name="transactionId" />
+        </div>
+
+        <div class="form-group">
+            <label for="credit">Credit</label>
+            <input type="text" class="form-control" id="credit" required [(ngModel)]="transactiondetails.credit"
+                name="credit"/>
+        </div>
+
+        <div class="form-group">
+            <label for="debit">Debit</label>
+            <input type="text" class="form-control" id="debit" required [(ngModel)]="transactiondetails.debit"
+                name="debit" />
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>

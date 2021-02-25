@@ -1,0 +1,19 @@
+<!-- <p>create-wallet works!</p> -->
+<h3>Insert wallet</h3>
+<div>
+    <form (ngSubmit)="onSubmit()" style="width: 400px; padding-left: 50px;">
+        <div class="form-group">
+            <label for="walletId">Wallet Id</label>
+            <input type="text" id="walletId" name="walletId" class="form-control" required [(ngModel)]="wallet.walletId">
+        </div>
+        <div class="form-group">
+            <label for="walletType">Wallet Type</label>
+            <input type="text" id="walletType" name="walletType" class="form-control" required [(ngModel)]="wallet.walletType">
+        </div>
+        <div class="form-group">
+            <label for="walletAmount">Wallet Amount</label>
+            <input type="text" id="walletAmount" name="walletAmount" class="form-control" required [(ngModel)]="wallet.walletAmount">
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>

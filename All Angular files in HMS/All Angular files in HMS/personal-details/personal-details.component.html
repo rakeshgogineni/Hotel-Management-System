@@ -1,0 +1,85 @@
+<br>
+<body>
+  <div>
+    <h1>
+  
+      Personal Details
+      
+    </h1>
+  
+  </div>
+  <br>
+  <br>
+  <br>
+
+<div class = "bg">
+
+<table align ="center">
+
+<thead>
+
+<tr>
+
+<th size = 4>Guest Id</th>
+
+<th size = 4>Guest Name</th>
+
+<th size = 4>Address</th>
+
+<th size = 4>Phone No</th>
+
+<th size = 4>Email</th>
+
+<th size = 4>Username</th>
+
+<th size = 4>Password</th>
+
+ 
+</tr>
+
+</thead>
+<tbody>
+  <tr *ngFor='let r of personaldetails'>
+   
+    <td size = 4>
+      <h5>{{r.guestId}}</h5>
+    </td>
+    <td size = 4>
+      <h5>{{r.guestName}}</h5>
+    </td>
+    <td size = 4>
+      <h5>{{r.address}}</h5>
+    </td>
+    <td size = 4>
+      <h5>{{r.phoneNo}}</h5>
+    </td>
+    <td size = 4>
+      <h5>{{r.email}}</h5>
+    </td>
+    <td size = 4>
+      <h5>{{r.username}}</h5>
+    </td>
+    <td size = 4>
+      <h5>{{r.password}}</h5>
+    </td>
+     
+    <td>
+
+      <button (click)="deletePersonalDetails(r.guestId)" class="btn btn-danger">Delete</button>
+      <button (click)="updatePersonalDetails(r.guestId)" class="btn btn-warning" style="margin-left: 10px">Update</button>
+
+    </td>
+          
+    
+    
+  </tr>
+  <tr *ngIf="!personaldetails || personaldetails.length==0">
+    <td colspan="12">
+      No PersonalDetails available
+    </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</body>

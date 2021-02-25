@@ -1,0 +1,32 @@
+
+    h1{
+        font-size: 40px;
+        text-align: center;
+        border-style:double;
+    border-radius: 20px;
+    border-color: peru;
+    }
+    h5 {
+        font-size: 20px;
+        }
+        table, td, th {
+            border: 2px solid black;
+            
+            }
+        th{
+            align-self: auto;
+            padding: 5px;
+    
+        }
+    
+    tr:hover {background-color: rgb(51, 127, 146);}
+    th {
+        background-color: rgb(190, 75, 46);
+        color: black;
+    } 
+    body{
+        padding: 20px;
+        width:85%;
+        float: right;
+
+    }

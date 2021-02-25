@@ -1,0 +1,96 @@
+<br>
+<body>
+  <div>
+    <h1>
+    Booking Details
+    </h1>
+    
+    </div>
+    <br>
+    <br>
+    <br>
+    
+    <div class = "bg">
+    
+    <table align="center">
+    
+    <thead>
+    
+    <tr>
+    
+    <th size = 4>  GUEST_ID  </th>
+    
+    <th size = 4>  HOTEL_ID </th>
+    
+    <th size = 4> ROOM_ID </th>
+    
+    <th size = 4> BOOKING_ID </th>
+    
+    <th size = 4> CHECKIN_DATE </th>
+    
+    <th size = 4>CHECKOUT_DATE </th>
+    
+    <th size = 4>AMOUNT_PAID </th>
+    
+    <th size = 4>AMOUNT_PENDING </th> 
+    
+    <th size = 4>STATUS</th> 
+    
+    
+    
+     
+    </tr>
+    
+    </thead>
+    <tbody>
+      <tr *ngFor='let r of bookingdetails'>
+       
+        <td size = 4>
+          <h5>{{r.guestId}}</h5>
+        </td>
+        <td size = 4>
+          <h5>{{r.hotelId}}</h5>
+        </td>
+        <td size = 4>
+          <h5>{{r.roomId}}</h5>
+        </td>
+        <td size = 4>
+            <h5>{{r.bookingId}}</h5>
+          </td>
+        <td size = 4>
+            <h5>{{r.checkinDate}}</h5>
+        </td>
+        <td size = 4>
+            <h5>{{r.checkoutDate}}</h5>
+        </td>
+        <td size = 4>
+            <h5>{{r.amountPaid}}</h5>
+        </td>
+        <td size = 4>
+            <h5>{{r.amountPending}}</h5>
+        </td>
+        <td size = 4>
+            <h5>{{r.status}}</h5>
+        </td>
+         
+        <td>        
+          
+          <button (click)="deleteBookingDetails(r.bookingId)" class="btn btn-danger">Delete</button>
+         
+          <button (click)="updateBookingDetails(r.bookingId)" class="btn btn-warning" style="margin-left: 10px">Update</button>
+          
+              </td>
+              
+        
+        
+      </tr>
+      <tr *ngIf="!bookingdetails || bookingdetails.length==0">
+        <td colspan="12">
+          No Bookings Yet!
+        </td>
+      </tr>
+    </tbody>
+    </table>
+    
+    </div>
+</body>

@@ -1,0 +1,23 @@
+<!-- <p>update-wallet works!</p> -->
+<h3>Update wallet</h3>
+<div [hidden]="submitted" style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="walletId">Wallet Id</label>
+            <input type="text" class="form-control" id="walletId" required [(ngModel)]="wallet.walletId" name="walletId" />
+          </div>
+        <div class="form-group">
+            <label for="walletType">Wallet Type</label>
+            <input type="text" class="form-control" id="walletType" required [(ngModel)]="wallet.walletType"
+                name="walletType" />
+        </div>
+
+        <div class="form-group">
+            <label for="walletAmount">Wallet Amount</label>
+            <input type="text" class="form-control" id="walletAmount" required [(ngModel)]="wallet.walletAmount"
+                name="walletAmount" />
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>

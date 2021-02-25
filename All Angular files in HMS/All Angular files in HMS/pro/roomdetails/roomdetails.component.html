@@ -1,0 +1,72 @@
+<br>
+
+<body>
+  <div>
+    <h1>
+      Room Details
+    </h1>
+  </div>
+  <br>
+  <br>
+  <br>
+
+  <div class="bg">
+
+    <table align="center">
+
+      <thead>
+
+        <tr>
+
+          <th size=4>Room No</th>
+
+          <th size=4>Room Type</th>
+
+          <th size=4>Room Cost</th>
+
+          <th size=4>Checkin Date</th>
+
+          <th size=4>Checkout Date</th>
+
+        </tr>
+
+      </thead>
+      <tbody>
+        <tr *ngFor='let rd of roomdetails'>
+
+          <td size=4>
+            <h5>{{rd.roomNo}}</h5>
+          </td>
+          <td size=4>
+            <h5>{{rd.roomType}}</h5>
+          </td>
+          <td size=4>
+            <h5>{{rd.roomCost}}</h5>
+          </td>
+          <td size=4>
+            <h5>{{rd.checkinDate}}</h5>
+          </td>
+          <td size=4>
+            <h5>{{rd.checkoutDate}}</h5>
+          </td>
+
+          <td>
+
+            <button (click)="deleteRoomdetails(rd.roomNo)" class="btn btn-danger">Delete</button>
+            <button (click)="updateroomdetails(rd.roomNo)" class="btn btn-warning"
+              style="margin-left: 10px">Update</button>
+
+          </td>
+
+
+        </tr>
+        <tr *ngIf="!roomdetails || roomdetails.length==0">
+          <td colspan="12">
+            No Room details available
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</body>
